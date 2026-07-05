@@ -2,6 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+### For testing
+Step 18.3 - Verify
+Open the browser.
+Press F12.
+Go to:
+Application
+↓
+Local Storage
+↓
+http://localhost:3000
+After login, you should see:
+token
+↓
+eyJhbGc...
+If you see that, React is successfully storing the JWT.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+

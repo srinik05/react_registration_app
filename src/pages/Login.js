@@ -30,20 +30,30 @@ function Login() {
 
     const onSubmit = (data) => {
 
-        const success = AuthService.login(
-            data.email,
-            data.password
-        );
+    AuthService.login(data)
+        .then((response) => {
 
-        if (success) {
+            console.log(response.data);
+
+            localStorage.setItem(
+                "token",
+                response.data.token
+            );
+
             toast.success("Login Successful");
+
             setTimeout(() => {
                 navigate("/dashboard");
             }, 1000);
-        }
-        else {
+
+        })
+        .catch((error) => {
+
+            console.log(error);
+
             toast.error("Invalid Email or Password");
-        }
+
+        });
     };
 
     const navigate = useNavigate();
